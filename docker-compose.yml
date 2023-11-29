@@ -21,7 +21,7 @@ services:
       - back-tier
 
   postgres:
-    image: mdillon/postgis:11-alpine
+    image: corpusops/postgis:15
     container_name: foodtrucks__postgres
     ports:
       - '5432:5432'
