@@ -37,7 +37,15 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'django.contrib.gis'
 ]
+
+FOODTRUCKS_APP = [
+    "apps.core.apps.CoreConfig",
+    "apps.trucks.apps.TrucksConfig",
+]
+
+INSTALLED_APPS += FOODTRUCKS_APP
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
