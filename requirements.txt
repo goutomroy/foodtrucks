@@ -1,0 +1,37 @@
+# django
+Django==4.2.7
+
+# djangorestframework
+djangorestframework==3.14.0
+django-filter==23.4
+
+# database
+psycopg2-binary==2.9.9
+
+
+# caching
+django-redis-cache==3.0.1
+
+# django-extensions
+django-extensions==3.2.3
+
+# coverage
+coverage==7.3.2
+
+# tests
+djet==0.3.0
+model-bakery==1.17.0
+
+# dependency and safety checker
+safety
+insecure-package==0.1.0
+graphviz==0.20.1
+pipdeptree==2.13.1
+
+# pre-commit, linter, formatter
+pre_commit==3.5.0
+flake8==6.1.0
+flake8-bugbear==23.11.28
+isort==5.12.0
+autoflake==2.2.1
+black==23.11.0
