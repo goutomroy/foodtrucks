@@ -1,16 +1,5 @@
-# django
-Django==4.2.7
+-r base.txt
 
-# djangorestframework
-djangorestframework==3.14.0
-django-filter==23.4
-
-# database
-psycopg2-binary==2.9.9
-
-
-# caching
-django-redis-cache==3.0.1
 
 # django-extensions
 django-extensions==3.2.3

@@ -7,7 +7,7 @@ services:
       sh -c "python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
 
-    container_name: hex_images__web
+    container_name: foodtrucks__web
     volumes:
       - .:/app
     ports:
@@ -20,30 +20,13 @@ services:
     networks:
       - back-tier
 
-  celery:
-    container_name: hex_images__celery
-    build:
-      context: .
-      dockerfile: Dockerfile
-
-    command: celery -A hex_images worker -l info
-    volumes:
-      - .:/app
-    env_file:
-      - .envs/.env.dev
-    depends_on:
-      - redis
-      - postgres
-    networks:
-      - back-tier
-
   postgres:
     image: postgres:15.3-alpine
-    container_name: hex_images__postgres
+    container_name: foodtrucks__postgres
     ports:
       - '5432:5432'
     volumes:
-      - /var/hex_images_service/postgres-data:/var/lib/postgresql/data
+      - /var/foodtrucks_service/postgres-data:/var/lib/postgresql/data
     env_file:
       - .envs/.env.dev
 
@@ -57,7 +40,7 @@ services:
     ports:
       - '6379:6379'
     volumes:
-      - /var/hex_images_service/redis-data:/data
+      - /var/foodtrucks_service/redis-data:/data
     networks:
       - back-tier
 
