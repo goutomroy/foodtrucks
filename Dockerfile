@@ -1,14 +1,12 @@
-FROM python:3.11-alpine
+FROM python:3.11
 
 RUN mkdir /app
 
 WORKDIR /app
 
-RUN apk add --no-cache gcc musl-dev python3-dev
-RUN apk add --no-cache gdal-bin libgdal-dev python3-gdal
-RUN apk add --no-cache python3-gdal
-RUN apk add --no-cache binutils libproj-dev
-RUN pip install -U pip setuptools wheel ruamel.yaml.clib
+RUN apt-get update &&\
+    apt-get install -y binutils libproj-dev gdal-bin libpq-dev &&\
+    apt-get clean
 
 COPY requirements requirements
 

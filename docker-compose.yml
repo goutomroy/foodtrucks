@@ -36,7 +36,7 @@ services:
 
   redis:
     image: redis:7.0.4-alpine
-    container_name: hex_images__redis
+    container_name: foodtrucks__redis
     ports:
       - '6379:6379'
     volumes:
