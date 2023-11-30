@@ -1,16 +1,19 @@
+
 ### Setup
 **Run following commands**
 * docker-compose up -d
 * docker container exec -it foodtrucks__web python manage.py createsuperuser
+* data file is loaded during migration
 
 ### Admin Url
 * http://localhost:8000/admin/
 
 
 ### Available endpoints to use
-**Please login to admin site before using these endpoints**
 * http://localhost:8000/
+* After hitting this url you would see :
 
+![food_trucks_working](food_trucks_working.png)
 
 ### Testing command
 * docker container exec -it hex_images__web python manage.py test --settings=hex_images.settings.testing
