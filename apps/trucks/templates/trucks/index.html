@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Nearby Trucks</title>
+</head>
+
+<body>
+
+    <h1>Nearby Trucks</h1>
+    {% if trucks %}
+    <ul>
+        {% for truck in trucks %}
+        <li>
+            {{ truck.applicant }} : {{truck.distance}}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>

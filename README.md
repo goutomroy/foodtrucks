@@ -1,32 +1,27 @@
 ### Setup
 **Run following commands**
 * docker-compose up -d
-* docker container exec -it hex_images__web python manage.py create_test_users
+* docker container exec -it foodtrucks__web python manage.py createsuperuser
 
 ### Admin Url
 * http://localhost:8000/admin/
 
-### Available users to login to admin site
-* username: **hex_basic** password: **hex_basic_2023**
-* username: **hex_premium** password: **hex_premium_2023**
-* username: **hex_enterprise** password: **hex_enterprise_2023**
 
 ### Available endpoints to use
 **Please login to admin site before using these endpoints**
-* http://localhost:8000/api/photos
-* http://localhost:8000/api/photos/<pk>
-* http://localhost:8000/api/expiring_link_view/<str:signed_link>/
-* http://localhost:8000/api/expiring_links
-* http://localhost:8000/api/expiring_links/<pk>
-* http://localhost:8000/api/thumbnail_photos
-* http://localhost:8000/media/<path>
+* http://localhost:8000/
 
 
 ### Testing command
 * docker container exec -it hex_images__web python manage.py test --settings=hex_images.settings.testing
 
 ### Code Coverage
-**93%**
+* Need to write
 
 ### Time to finish
-It took about 28 hours to finish the project
+It took about 4 hours to finish the project
+
+### TODO
+* It was done in hurry in about 3-4 hours, just to achieve the main goal of the project, finding nearby trucks.
+* Need to discuss about the data fields and then modify the Truck model and load data migration file.
+
