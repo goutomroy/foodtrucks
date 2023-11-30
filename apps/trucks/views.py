@@ -3,8 +3,8 @@ from django.contrib.gis.geos import Point
 from django.contrib.gis.db.models.functions import Distance
 from .models import Truck
 
-longitude = -80.191_788
-latitude = 25.761_681
+longitude = 37.76008693198698
+latitude = -122.41880648110114
 user_location = Point(longitude, latitude, srid=4326)
 
 
