@@ -27,4 +27,5 @@ It took about 4 hours to finish the project
 ### TODO
 * It was done in hurry in about 3-4 hours, just to achieve the main goal of the project, finding nearby trucks.
 * Need to discuss about the data fields and then modify the Truck model and load data migration file.
+* Put **Index** on model fields after discussing.
 
